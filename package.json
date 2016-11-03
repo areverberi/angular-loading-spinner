@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/adonespitogo/angular-loading-spinner",
   "dependencies": {
-    "angular-spinner": "~0.6.1"
+    "angular-spinner": "0.8.1"
   }
 
 }
