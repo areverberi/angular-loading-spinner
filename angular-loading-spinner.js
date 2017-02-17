@@ -24,3 +24,5 @@
 
     }]);
 }).call(this);
+
+module.exports='ngLoadingSpinner';
