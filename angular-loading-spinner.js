@@ -1,5 +1,6 @@
+var angularSpinner = require('angular-spinner');
 (function(){
-    angular.module('ngLoadingSpinner', ['angularSpinner'])
+    angular.module('ngLoadingSpinner', [angularSpinner.name])
     .directive('usSpinner',   ['$http', '$rootScope' ,function ($http, $rootScope){
         return {
             link: function (scope, elm, attrs)
