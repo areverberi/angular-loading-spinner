@@ -17,7 +17,7 @@ var angularSpinner = require('angular-spinner');
                     if(loading){
                         elm.removeClass('ng-hide');
                     }else{
-						            if(angular.isDefined($window.parent.iframeFogliLoaded)){
+                        if(angular.isDefined($window.parent.iframeFogliLoaded)){
                           $window.parent.iframeFogliLoaded();
                         }
                         if(angular.isDefined($window.parent.unBlockDOUI)){
