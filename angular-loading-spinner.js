@@ -14,6 +14,8 @@ var angularSpinner = require('angular-spinner');
                 scope.$watch(scope.isLoading, function (loading)
                 {
                     $rootScope.spinnerActive = loading;
+					console.info('$rootScope ->\n',$rootScope);
+					console.info('this ->\n',this);
                     if(loading){
                         elm.removeClass('ng-hide');
                     }else{
