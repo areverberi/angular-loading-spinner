@@ -1,7 +1,7 @@
 var angularSpinner = require('angular-spinner');
 (function(){
     angular.module('ngLoadingSpinner', [angularSpinner.name])
-    .directive('usSpinner',   ['$http', '$rootScope' ,function ($http, $rootScope){
+    .directive('usSpinner',   ['$http','$rootScope','$window',function ($http,$rootScope,$window){
         return {
             link: function (scope, elm, attrs)
             {
@@ -17,6 +17,12 @@ var angularSpinner = require('angular-spinner');
                     if(loading){
                         elm.removeClass('ng-hide');
                     }else{
+                        if(angular.isDefined($window.parent.iframeFogliLoaded)){
+                          $window.parent.iframeFogliLoaded();
+                        }
+                        if(angular.isDefined($window.parent.unBlockDOUI)){
+                          $window.parent.unBlockDOUI();
+                        }
                         elm.addClass('ng-hide');
                     }
                 });
